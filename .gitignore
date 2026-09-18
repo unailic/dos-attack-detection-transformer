@@ -1,0 +1,14 @@
+# Generated data and intermediate files
+data/*
+!data/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+
+# Operating system files
+.DS_Store
+Thumbs.db
