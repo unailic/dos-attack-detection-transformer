@@ -148,3 +148,43 @@ The generated data and intermediate model results will be stored in `data/`, whi
 - **Jupyter / Google Colab** – development and experimentation environment
 
 ## Results & Visualizations
+
+### Model Performance
+
+The Random Forest baseline achieved **99.87% test accuracy**, while the Transformer model achieved **98.52%**. The confusion matrices below provide a class-level view of their predictions.
+
+#### Random Forest
+
+![Random Forest Confusion Matrix](results/rf_confusion_matrix.png)
+
+#### Transformer
+
+![Transformer Confusion Matrix](results/transformer_confusion_matrix.png)
+
+### Random Forest Feature Importance
+
+The most influential features identified by the Random Forest model are shown below. Feature importance is based on the model's mean decrease in impurity (MDI).
+
+![Random Forest Feature Importance](results/rf_feature_importance.png)
+
+### Transformer Training
+
+The training loss decreased consistently over the 20 training epochs.
+
+![Transformer Training Loss](results/transformer_loss_curve.png)
+
+### Attention Analysis
+
+Attention weights from the first Transformer encoder layer were analyzed for the `[CLS]` token. The visualization shows the average attention assigned to individual network traffic features across attention heads for one batch of test samples.
+
+![Transformer Attention Weights](results/transformer_attention_weights.png)
+
+### Learned Representations
+
+The learned `[CLS]` representations were projected into two dimensions using t-SNE. A fixed random sample of **5,000 test instances** was used to make the visualization reproducible across runs.
+
+![t-SNE Visualization](results/transformer_tsne.png)
+
+### Statistical Comparison
+
+A McNemar test was used to compare the predictions of the two models on the same test set. The difference was statistically significant (**p < 0.001**), with the Random Forest producing more correct predictions overall.
