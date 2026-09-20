@@ -4,6 +4,8 @@ This project explores the application of a Transformer-based neural network for 
 
 The project was developed as part of my Bachelor's thesis at the University of Belgrade, Faculty of Organizational Sciences, Software Engineering module. The proposed Transformer model is evaluated against a Random Forest baseline, with additional analysis of learned representations, attention weights, model stability, and statistical comparison using the McNemar test.
 
+> **Note:** The notebooks contain explanatory text and code comments in Serbian, as the project was originally developed as part of a Bachelor's thesis. The README is provided in English to make the project overview accessible to a broader audience.
+
 ## Key Results
 
 - **Random Forest baseline:** 99.87% test accuracy
